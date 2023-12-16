@@ -4,7 +4,7 @@
 </script>
 
 <div class="login-container"> 
-    <form action="/login" method="post">
+    <form action="?/login" method="post">
         <!-- El URL estaba apuntando a "localhost" (pero, si inicias la aplicación con un host diferente, por ejemplo, en Codespaces, ya "localhost" no está disponible. -->
         <!-- Se eliminó esa porción (host) para que tome de manera predeterminada la base o host del servidor que está sirviendo el documento -->
 

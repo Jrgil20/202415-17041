@@ -1,4 +1,5 @@
-import { Action } from "@sveltejs/kit";
+import { fail } from "@sveltejs/kit";
+import type { Action } from "./$types";
 
 const login: Action = async ({ request }) => {
 
@@ -8,11 +9,9 @@ const login: Action = async ({ request }) => {
     const password = data.get('password');
 
     if (!username || !password) {
-        return {
-            status: 400,
-            body: {
-                message: 'Username and password are required'
-            }
-        };
+        return fail(400, {invalid: true});
     }
-}
+
+};
+
+export const actions: Action = { login }; 
